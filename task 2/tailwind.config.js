@@ -5,7 +5,12 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor:['group-hover'],
+      textColor:['group-hover'],
+      padding:['hover'],
+      margin:['hover']
+    },
   },
   plugins: [],
 }
