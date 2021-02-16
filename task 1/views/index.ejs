@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('header/header'); -%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="bg-light">
+  <div class="container">
+
+<!--Snackbar-->
+<div id="snackbar">Some text some message..</div>
+
+<div class="d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+  <div class="card py-1 px-4 shadow-sm ">
+    <div class="card-body border-0">
+      <div class="text-center">
+       <h1>
+         <i class="fas fa-rocket shadow-sm p-3 text-white brand bg-primary"></i><br>
+         <h3 class="text-primary "><b>Cla<span class="text-secondary">sso</span></b></h1>
+      </h1>
+      </div>
+
+      <!--Sign In-->
+      <form  id="signform">
+        <h5 class="text-secondary text-center"><b>Sign in to your account</b></h5>
+        <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <div class="input-group mb-3">
+          <input type="email" required class="form-control" name="email" id="signemail">
+          <span class="input-group-text" id="basic-addon5"><i class="fas text-secondary fa-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+        <div class="input-group mb-3">
+          <input type="password" required class="form-control password" name="password" id="signpass">
+          <span class="input-group-text" id="basic-addon6"><i class="fas text-secondary fa-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="signpass">
+        <label class="form-check-label" for="flexCheckDefault">
+          Show Password
+        </label>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" type="submit" id="sign">SIGN IN</button>
+      </div>
+      <hr>
+    </form>
+
+    <!--Account Creation-->
+    <form id="createform">
+      <div class="createform">
+        <h5 class="text-secondary text-center"><b>Create Account</b></h5>
+        <div class="mb-2">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <div class="input-group mb-3">
+            <input type="text" required class="form-control" name="name" id="formname">
+            <span class="input-group-text" id="basic-addon1"><i class="fas text-secondary fa-times-circle"></i></span>
+          </div>
+        </div>
+        <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <div class="input-group mb-3">
+          <input type="email" required class="form-control" name="email" id="formemail">
+          <span class="input-group-text" id="basic-addon2"><i class="fas text-secondary fa-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+        <div class="input-group mb-3">
+          <input type="password" required class="form-control signpassword" id="createpass1" name="password">
+          <span class="input-group-text" id="basic-addon3"><i class="fas text-secondary fa-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+        <div class="input-group mb-3">
+          <input type="password" required class="form-control signpassword" name="password2"  id="createpass2">
+          <span class="input-group-text" id="basic-addon4"><i class="fas text-secondary fa-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="checksignpass">
+        <label class="form-check-label" for="flexCheckDefault">
+          Show Password
+        </label>
+      </div>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary shadow-sm text-uppercase" id="create" type="submit">Create Account</button>
+      </div>
+      <div class="createform">
+        <hr>
+        <div class="d-grid gap-2">
+          <button class="btn btn-success shadow-sm text-uppercase" id="signblock" type="button">Sign In</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>  
+</div>
+  </div>
+  </body>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/javascripts/login.js"></script>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
+    <title><%= title %></title>
+    <link rel="stylesheet" href='/stylesheets/plan.css'>
+</head>
+  <body class="bg-light">
+    <!--Toast-->
+    <div id="snackbar">Some text some message..</div>
+
+    <nav class="navbar shadow-sm navbar-light bg-white p-2">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-secondary"><span class="text-primary">Cla</span>sso</a>
+          <a class="btn btn-primary ms-auto" style="border-radius: 5px;" href="/plans/logout">Logout</a>
+      </div>
+    </nav>
+
+<!--Confirmation-->    
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="p-3 border-top">
+      <form id="subform">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Enter number of users</label>
+          <input type="number" class="form-control" name="count" id="subval" placeholder="1" min="1" max="1000">
+        </div>
+        <label class="lead" id="amount">Amount: 0</label>
+        <div class="text-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary save" >Save Changes</button>
+        </div>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--Overwrite-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+      </div>
+      <div class="p-3 modal2 ">
+        You already are subscribed to pack. Do you want to change the subscription to new one?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-danger" id="update" data-dismiss="modal">Overwrite</button>
+        </div>
+        </div>
+    </div>
+  </div>
+
+<!--Plans-->
+<div class=" align-items-center" style="height:90vh;display: flex !important;">
+    <div class="container mt-3 ">
+      <p class="h3 text-center"><b><span class="text-primary">Flexible</span> Plans</b></p>
+      <p class="h5 text-center text-secondary">Choose a plan that works best for you<br>and your team.</p>
+      <div class="row align-items-center mt-3">
+        <div class="col-sm">
+          <div class="card border-0 p-lg-2 mb-3 shadow-lg">
+            <div class="card-body">
+              <div class="pt-2 ">
+                <div class="shape me-3  rounded-3 float-start bg-success">
+                </div>
+                <h4 class="card-title">Basic</h4>
+                <p class="text-secondary">&#128;<span class="text-dark h5">&nbsp;10</span>/user	</h3>
+                </div>            
+                <hr>
+              <ul class="text-secondary list-unstyled">
+                <li><i class="fas fa-check me-2"></i> Get started with <span class="text-dark fw-bold">messaging</span></li>
+                <li><i class="fas fa-check me-2"></i> Flexible <span class="text-dark fw-bold">team meetings</span></li>
+                <li><i class="fas fa-check me-2"></i> <span class="text-dark fw-bold">5TB</span> cloud storage</li>
+              </ul>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary py-2" type="button" id="basic">Choose Plan &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card border-0 text-white mb-3 shadow-lg bg-dark p-lg-3" >
+            <div class="card-body">
+              <div class="text-end">
+              <span class="badge rounded-pill bg-primary mt-2 " style="width: 5rem;">Popular</span>
+              </div>
+              <div class="pt-2 ">
+              <div class="shape me-3  rounded-3 float-start" style="background-color: tomato;">
+
+              </div>
+              <h4 class="card-title">Startup</h4>
+              <p class="text-gray">&#128;<span class="text-white h5">&nbsp;24</span>/user	</h3>
+              </div>
+              <hr>
+              <ul class="text-white list-unstyled">
+                <li><i class="fas fa-check me-2"></i> <span class="text-gray">All features in </span> Basic</li>
+                <li><i class="fas fa-check me-2"></i>  <span class="text-gray">Flexible</span> call scheduling</li>
+                <li><i class="fas fa-check me-2"></i>15TB <span class="text-gray">cloud storage</span> </li>
+              </ul>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary py-2" type="button" id="startup">Choose Plan &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card p-lg-2 shadow-lg border-0 mb-3" >
+            <div class="card-body">
+              <div class="pt-2 ">
+                <div class="shape  me-3 me-md-1 me-lg-3  rounded-3 float-start bg-primary" >
+                </div>
+                <h4 class="card-title">Enterprise</h4>
+                <p class="text-secondary">&#128;<span class="text-dark h5">&nbsp;35</span>/user	</h3>
+                </div>            
+              <hr>
+              <ul class="text-secondary list-unstyled">
+                <li><i class="fas fa-check me-2"></i> All features in <span class="text-dark fw-bold">Startup</span></li>
+                <li><i class="fas fa-check me-2"></i> Growth <span class="text-dark fw-bold">oriented</span></li>
+                <li><i class="fas fa-check me-2"></i> <span class="text-dark fw-bold">Unlimited</span> cloud storage</li>
+              </ul>
+              <div class="d-grid gap-2">
+                <button class="btn btn-primary py-2" type="button" id="enterprise">Choose Plan &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="/javascripts/plan.js"></script>
+</html>
