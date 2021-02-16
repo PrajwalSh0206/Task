@@ -14,6 +14,7 @@ module.exports = {
       fontWeight: ['hover', 'focus'],
       display: ['hover', 'group-hover'],
       borderRadius: ['hover', 'focus'],
+      boxShadow: ['active','hover'],
     },
   },
   plugins: [],
