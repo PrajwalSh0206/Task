@@ -12,6 +12,33 @@
 </head>
 
 <body>
+<!--Sidebar-->
+<div class="lg:hidden max-w-3/4 md:transition-all duration-300 w-full md:max-w-1/2 transform top-0 left-0 -translate-x-full bg-white h-full fixed text-gray-500 z-50 border-r-2 shadow-md " id="sidebar">
+    <div class="px-10 pt-10 ">
+    <p class="font-semibold text-3xl"><i class="fas fa-bars mr-3"></i>Menu</p>
+    <div class="md:ml-8 flex flex-col justify-between font-medium text-xl pt-3">
+        <a href="#" class="uppercase p-2 hover:bg-blue-500  hover:text-white rounded-md">Home</a>
+        <a href="#" class="uppercase p-2 hover:bg-blue-500  hover:text-white rounded-md">Corporate</a>
+        <a href="#" class="uppercase p-2 hover:bg-blue-500  hover:text-white rounded-md">My offers</a>
+        <a href="#" class="uppercase p-2 hover:bg-blue-500  hover:text-white rounded-md ">Partners</a>
+        <a href="#" class="uppercase p-2 hover:bg-blue-500  hover:text-white rounded-md">News</a>
+        <a href="#" class="uppercase p-2 hover:bg-blue-500  hover:text-white rounded-md">Contact Us</a>
+    </div>
+    </div>
+    <div class="flex  flex-col border mt-2  text-gray-500 px-10 py-4 bg-gray-100">
+        <a href="tel:#" class="font-semibold flex items-center mb-2 border-b pb-2 border-gray-400">
+            <i class="fas fa-phone-alt text-2xl mr-2"></i>
+            <p>Phone<br>
+                <span class="text-sm font-medium">+91 9292929292 </span></p>
+        </a>
+        <a href="#" class="font-semibold flex items-center">
+            <i class="fas fa-map-marker-alt text-2xl mr-3"></i>
+            <p>Location<br>
+                <span class="text-sm font-medium">Lorem ipsum dolor </span></p>
+        </a>
+    </div>
+</div>
+
 <!--ScrollButton-->
     <button  id="scrolltop" title="Go to top" class="m-4 shadow-lg font-bold bg-green-500 fixed bottom-0 right-0 text-white px-4 py-3 rounded-full hidden text-xl focus:outline-none active:bg-green-600">
         <i class="fas fa-caret-up"></i>
@@ -22,7 +49,7 @@
         <nav class="bg-transparent  lg:px-36 lg:py-4 text-gray-500 lg:text-white fixed w-full lg:relative flex flex-col" id="navbar">
             <div id="navbar2" class="lg:border-0 border lg:shadow-none shadow-sm bg-white lg:bg-transparent  md:p-0 px-2">
             <div class="flex justify-start lg:justify-between lg:border-b-2 md:mb-3 p-3">
-                <button class="lg:hidden mr-2 focus:outline-none active:bg-gray-200 rounded-full px-3 py-2 text-2xl md:mr-0">
+                <button class="lg:hidden mr-2 focus:outline-none active:bg-gray-200 rounded-full px-3 py-2 text-2xl md:mr-0" id="hamburger">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="flex items-center">
@@ -31,7 +58,7 @@
                     <span class="ml-2 font-semibold text-xl">Company Growth<br><span
                             class="text-sm font-medium">Shipping Company</span></span>
                 </div>
-                <div class="hidden md:flex items-center ml-0 md:ml-auto lg:text-gray-200 text-gray-400">
+                <div class="hidden lg:flex items-center ml-0 md:ml-auto lg:text-gray-200 text-gray-400">
                     <a href="tel:#" class="font-semibold flex items-center mr-5">
                         <i class="fas fa-phone-alt text-2xl mr-2"></i>
                         <p>Phone<br>
@@ -71,10 +98,10 @@
     </div>
 
 <!--Details-->
-    <div class="lg:mx-10 px-10 -mt-12 text-4xl flex flex-col md:flex-row text-gray-500 lg:justify-center md:items-center">
+    <div class="lg:mx-10 px-12 -mt-12 text-4xl flex flex-col md:flex-row text-gray-500 lg:justify-center md:items-center">
 
         <div
-            class="p-8 md:py-4 lg:py-8  text-center bg-gray-50 md:bg-white shadow-lg cursor-pointer md:border-r-2 border-gray-200 group hover:bg-indigo-500 hover:text-white hover:border-0  hover:rounded">
+            class="p-8 md:py-4 lg:py-8  text-center bg-white shadow-lg cursor-pointer md:border-r-2 border-gray-200 group hover:bg-indigo-500 hover:text-white hover:border-0  hover:rounded">
             <i class="fas fa-plane"></i>
             <p class="text-base text-indigo-400 group-hover:text-white mt-2 font-semibold uppercase">Jet Freight</p>
             <p class="text-sm font-medium">Cargo Transport</p>
@@ -84,7 +111,7 @@
         </div>
 
         <div
-            class="p-8 md:py-4 lg:py-8 text-center bg-gray-50 md:bg-white shadow-lg cursor-pointer md:border-r-2 group hover:bg-indigo-500 hover:text-white hover:border-0 hover:rounded">
+            class="p-8 md:py-4 lg:py-8 text-center bg-white shadow-lg cursor-pointer md:border-r-2 group hover:bg-indigo-500 hover:text-white hover:border-0 hover:rounded">
             <i class="fas fa-truck"></i>
             <p class="text-base text-indigo-400 mt-2 group-hover:text-white font-semibold uppercase">land Freight</p>
             <p class="text-sm font-medium">Cargo Transport</p>
@@ -94,7 +121,7 @@
         </div>
 
         <div
-            class="p-8 md:py-4 lg:py-8 text-center bg-gray-50 md:bg-white shadow-lg md:border-r-2 cursor-pointer group hover:bg-indigo-500 hover:text-white hover:border-0 hover:rounded">
+            class="p-8 md:py-4 lg:py-8 text-center bg-white shadow-lg md:border-r-2 cursor-pointer group hover:bg-indigo-500 hover:text-white hover:border-0 hover:rounded">
             <i class="fas fa-ship"></i>
             <p class="text-base text-indigo-400 mt-2 group-hover:text-white font-semibold uppercase">Sea Freight</p>
             <p class="text-sm font-medium">Cargo Transport</p>
@@ -104,7 +131,7 @@
         </div>
 
         <div
-            class="p-8 md:py-4 lg:py-8 text-center bg-gray-50 md:bg-white shadow-lg md:border-r-2 cursor-pointer group hover:bg-indigo-500 hover:text-white hover:border-0 hover:rounded">
+            class="p-8 md:py-4 lg:py-8 text-center bg-white shadow-lg md:border-r-2 cursor-pointer group hover:bg-indigo-500 hover:text-white hover:border-0 hover:rounded">
             <i class="fas font-medium fa-snowplow"></i>
             <p class="text-base text-indigo-400 mt-2 group-hover:text-white font-semibold uppercase">Project Cargo</p>
             <p class="text-sm font-medium">Cargo Transport</p>
@@ -114,7 +141,7 @@
         </div>
 
         <div
-            class="p-8 md:py-4 lg:py-8 text-center hover:rounded cursor-pointer group shadow-lg bg-gray-50 md:bg-white hover:bg-indigo-500  hover:text-white">
+            class="p-8 md:py-4 lg:py-8 text-center hover:rounded cursor-pointer group shadow-lg bg-white hover:bg-indigo-500  hover:text-white">
             <i class="fas font-medium fa-building"></i>
             <p class="text-base text-indigo-400 mt-2 group-hover:text-white font-semibold uppercase">Shipping Agency</p>
             <p class="text-sm font-medium">Cargo Transport</p>
