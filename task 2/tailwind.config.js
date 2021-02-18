@@ -1,15 +1,25 @@
 module.exports = {
-  purge: [ './*.html',
-  './*.js',],
+  purge:{ 
+    enabled: true,
+    content:[ './*.html',
+  './*.js',]
+},
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    maxWidth: {
+      '0': '0',
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+     },
+    extend: {
+    },
   },
   variants: {
     extend: {
       backgroundColor:['group-hover','active'],
       textColor:['group-hover'],
-      padding:['group-hover','hover'],
       borderWidth: ['hover', 'focus'],
       fontWeight: ['hover', 'focus'],
       display: ['hover', 'group-hover'],
